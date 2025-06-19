@@ -1,0 +1,42 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "signatureName": "serving_default",
+        "labelKey": "Loan_Status"
+      }
+    ],
+    "slicingSpecs": [
+      {}
+    ],
+    "metricsSpecs": [
+      {
+        "metrics": [
+          {
+            "className": "ExampleCount"
+          },
+          {
+            "className": "AUC"
+          },
+          {
+            "className": "BinaryAccuracy",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.5
+              }
+            }
+          }
+        ],
+        "modelNames": [
+          ""
+        ]
+      }
+    ]
+  },
+  "version": "0.42.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "pipelines\\muhammad-fahmi-hutomo-pipeline\\Trainer\\model\\6\\Format-Serving"
+  }
+}
